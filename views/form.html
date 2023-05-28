@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario | Efectividad de controles</title>
+    <link rel="stylesheet" href="../public/css/form.css"/>
+    <script type="module" src="../public/js/form.js"></script>
+</head>
+<body>
+    <h2>Efectividad de Controles</h2>
+    <form id="formulario" method="POST">
+
+        <label for="nombre">Nombre del Control:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre del control">
+        <br>
+
+        <label for="responsable">Responsable del Control:</label>
+        <input type="text" id="responsable" name="responsable" placeholder="Nombre del responsable/Miembro del equipo asignado">
+        <br>
+
+        <label for="fechaImplementacion">Fecha de Implementación:</label>
+        <input type="date" id="fechaImplementacion" name="fechaImplementacion">
+        <br>
+
+        <label for="descripcion">Descripción del Control:</label>
+        <textarea id="descripcion" name="descripcion" rows="8" cols="50" placeholder="Descripción del control"></textarea>
+        <br>
+
+        <label for="observaciones">Observaciones:</label>
+        <textarea id="observaciones" name="observaciones" rows="8" cols="50" placeholder="Observaciones del control"></textarea>
+        <br>
+
+        <fieldset>
+            <legend>Tipo de Control:</legend>
+            <input type="radio" id="preventivo" name="tipoControl" value="3-Preventivo" checked> Preventivo
+            <input type="radio" id="disuasivo" name="tipoControl" value="1-Disuasivo"> Disuasivo
+            <input type="radio" id="correctivo" name="tipoControl" value="1-Correctivo"> Correctivo
+            <input type="radio" id="detectivo" name="tipoControl" value="2-Detectivo"> Detectivo
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Nivel de Implementación:</legend>
+            <input type="radio" id="manual" name="nivelImplementacion" value="3-Manual" checked> Manual
+            <input type="radio" id="semiautomatico" name="nivelImplementacion" value="1-Semiautomático"> Semiautomático
+            <input type="radio" id="automatico" name="nivelImplementacion" value="2-Automático"> Automático
+        </fieldset>
+        <br>
+
+        <label for="periodicidad">Periodicidad de ocurrencia del control:</label>
+        <select id="periodicidad" name="periodicidad">
+            <option value="0" selected disabled hidden>Selecciona la periodicidad</option>
+            <option value="3-Por evento">Por evento</option>
+            <option value="3-Diario">Diario</option>
+            <option value="3-Semanal">Semanal</option>
+            <option value="2-Mensual">Mensual</option>
+            <option value="2-Bimestral">Bimestral</option>
+            <option value="1-Semestral">Semestral</option>
+            <option value="1-Anual">Anual</option>
+        </select>
+        <br>
+
+        <div class="formulario_mensaje" id="formulario_mensaje">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente.</p>
+        </div>
+
+        <button type="submit" class="formulario_btn">Enviar</button>
+
+    </form>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/*Mensaje de error*/
+.formulario_mensaje {
+    height: 45px;
+    line-height: 45px;
+    background-color: #f66060;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+.formulario_mensaje-activo {
+    display: block;
+}
+/*Boton*/
+.formulario_btn {
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.formulario_btn:hover {
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+}

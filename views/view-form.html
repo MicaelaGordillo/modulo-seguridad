@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista | Efectividad de controles</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="../public/css/view-form.css" />
+    <script src="../public/js/view-form.js"></script>
+    <script src="http://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body id="pdfContent">
+
+    <h2>Datos del Formulario</h2>
+    
+    <div id="data-container">
+        <p><strong>Responsable del Control:</strong> <span id="nombre"></span></p>
+        <p><strong>Responsable del Control:</strong> <span id="responsable"></span></p>
+        <p><strong>Fecha de Implementación:</strong> <span id="fechaImplementacion"></span></p>
+        <p><strong>Descripción del Control:</strong> <span id="descripcion"></span></p>
+        <p><strong>Observaciones:</strong> <span id="observaciones"></span></p>
+        <p><strong>Tipo de Control:</strong> <span id="tipoControl"></span></p>
+        <p><strong>Nivel de Implementación:</strong> <span id="nivelImplementacion"></span></p>
+        <p><strong>Periodicidad:</strong> <span id="periodicidad"></span></p>
+    </div>
+
+    <div class="card">
+        <canvas id="efectividad-total"></canvas>
+    </div>
+
+    <button id="generatePDFButton">Generar PDF</button>
+    <button id="aceptarButton">Aceptar</button>
+
+</body>
+</html>
