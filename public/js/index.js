@@ -1,11 +1,24 @@
 window.addEventListener('load', function() {
-    
     let registros = this.localStorage.getItem("registros");
     if (registros != null) {
-        console.log("registros", registros);
         registros = JSON.parse(localStorage.getItem("registros"));
         renderizarControles(registros);
+    } else {
+        registros = [{
+            id: 1,
+            nombre: "Control 1",
+            responsable: "Responsable 1",
+            fechaImplementacion: "2021-01-01",
+            descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultrices ultrices, nunc nisl aliquam nunc, quis aliqua",
+            observaciones: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultrices ultrices, nunc nisl aliquam nunc, quis aliqua",
+            tipoControl: "1-Correctivo",
+            nivelImplementacion: "1-Semiautomático",
+            periodicidad: "1-Semestral"
+        }];
+        localStorage.setItem("registros", JSON.stringify(registros));
+        renderizarControles(registros);
     }
+    console.log("registros", registros);
     
     document.getElementById("btnAddControl").addEventListener("click", () => {
         window.location.href = "form.html"; 
