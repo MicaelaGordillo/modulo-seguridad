@@ -1,5 +1,6 @@
 window.addEventListener('load', function() {
     let registros = this.localStorage.getItem("registros");
+    console.log("registros", registros);
     if (registros != null) {
         registros = JSON.parse(localStorage.getItem("registros"));
         renderizarControles(registros);
@@ -42,8 +43,8 @@ function renderizarControles(registros) {
                     <p>Responsable: ${control.responsable}</p>
                     <p>Descripción: ${control.descripcion}</p>
                     <p>Fecha de implementación: ${control.fechaImplementacion}</p>
-                    <button onclick="verMas(${control.id})">Ver más</button>
-                    <button onclick="eliminar(${control.id})">Eliminar</button>
+                    <button class="button ver-mas" onclick="verMas(${control.id})"> Ver más</button>
+                    <button class="button eliminar" onclick="eliminar(${control.id})">Eliminar</button>
                 </div>
             </div>
         </div>

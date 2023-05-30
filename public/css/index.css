@@ -1,5 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+#img-portada{
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    padding: 10px 60px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: 700;
+    color: #263238;
+}
+
+.description {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 0 25%;
+    /* font-weight: 500; */
+}
+
+.filter-select {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    /* width: 100%; */
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 10px;
+}
+option {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.filter-select:focus {
+    outline: none;
+}
+
+
+/* CSS */
+.button {
+    height: 55px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid rgb(119, 119, 119);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    /* z-index: 1; */
+}
+
+.button:after {
+    content: "";
+    background-color: #ffe44ccb;
+    width: 100% !important;
+    z-index: -1 !important;
+    position: absolute ;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.button:hover:after {
+    top: 0px !important;
+    left: 0px !important;
+}
+
+@media (min-width: 768px) {
+    .button {
+        padding: 13px 50px 13px;
+    }
+}
+
+#second-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* padding: 5px 50px; */
+}
+
+
+/* Historial - acordion */
+h6{
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    /* margin-right: 10px; */
+}
+.accordion:focus{
+    outline: none !important;
+}
+
+.accordion-button:not(.collapsed){
+    color: #4e4e4e !important;
+    background-color: #DDF4F3 !important;
+}
+
+.accordion-button:focus{
+    /* border-color: #ffe54c !important; */
+    box-shadow: 0 0 0 0.25rem  rgba(221, 244, 243,0.123) !important;
+}
+.accordion-item{
+    background-color: transparent !important;
+    /* z-index: -50 !important; */
+    border: 1px solid #ccc !important;
+    border-radius: 5px !important;
+    margin-bottom: 10px !important;
+    /* box-shadow: 0 0 0 0.25rem rgba(255, 244, 87, 0.123) !important; */
+}
+
+.ver-mas:after{
+    background-color: rgb(162, 223, 170);
+    top: 5px;
+    left: 5px;
+
+}
+
+.eliminar:after{
+    background-color: rgb(247, 181, 181);
+    top: 3px;
+    left: 3px;
+}
+
+.ver-mas, .eliminar{
+    height: 35px;
+    padding: 0 10px;
+    margin: 0 20px 0 0;
+}
+.icon{
+    color: #4e4e4e !important;
+   /* width: 2px !important; */
 }

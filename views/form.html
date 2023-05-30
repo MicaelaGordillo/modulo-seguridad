@@ -7,49 +7,84 @@
     <title>Formulario | Efectividad de controles</title>
     <link rel="stylesheet" href="../public/css/form.css"/>
     <script type="module" src="../public/js/form.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 </head>
 <body>
-    <h2>Efectividad de Controles</h2>
+    <div id="container">
+        <h2>Efectividad de Controles</h2>
     <form id="formulario" method="POST">
 
-        <label for="nombre">Nombre del Control:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre del control">
+        <label for="nombre" class="input">
+            
+            <input type="text" id="nombre" name="nombre" placeholder="" class="input__field">
+            <span class="input__label"><i class="zmdi zmdi-widgets"></i> Nombre del control</span>
+        </label>
+        
         <br>
 
-        <label for="responsable">Responsable del Control:</label>
-        <input type="text" id="responsable" name="responsable" placeholder="Nombre del responsable/Miembro del equipo asignado">
+        <label for="responsable" class="input">
+            <input type="text" id="responsable" name="responsable" placeholder="" class="input__field">
+            <span class="input__label"><i class="zmdi zmdi-account"></i> Responsable del Control</span>
+        </label>
         <br>
 
-        <label for="fechaImplementacion">Fecha de Implementación:</label>
-        <input type="date" id="fechaImplementacion" name="fechaImplementacion">
+        <label for="fechaImplementacion" class="input">
+            <input type="date" id="fechaImplementacion" name="fechaImplementacion" placeholder="" class="input__field">
+            <span class="input__label"><i class="zmdi zmdi-calendar-check"></i> Fecha de Implementación</span>
+        </label>
+        
         <br>
 
-        <label for="descripcion">Descripción del Control:</label>
+        <label class="textarea-label" for="descripcion"><i class="zmdi zmdi-comment-text"></i> Descripción del Control:</label><br>
         <textarea id="descripcion" name="descripcion" rows="8" cols="50" placeholder="Descripción del control"></textarea>
         <br>
 
-        <label for="observaciones">Observaciones:</label>
+        <label class="textarea-label" for="observaciones"><i class="zmdi zmdi-comment-alert"></i> Observaciones:</label><br>
         <textarea id="observaciones" name="observaciones" rows="8" cols="50" placeholder="Observaciones del control"></textarea>
         <br>
-
         <fieldset>
-            <legend>Tipo de Control:</legend>
-            <input type="radio" id="preventivo" name="tipoControl" value="3-Preventivo" checked> Preventivo
-            <input type="radio" id="disuasivo" name="tipoControl" value="1-Disuasivo"> Disuasivo
-            <input type="radio" id="correctivo" name="tipoControl" value="1-Correctivo"> Correctivo
-            <input type="radio" id="detectivo" name="tipoControl" value="2-Detectivo"> Detectivo
+            <legend><i class="zmdi zmdi-star"></i> Tipo de Control:</legend>
+            <label for="preventivo">
+                <input type="radio" id="preventivo" name="tipoControl" value="3-Preventivo" checked> 
+                Preventivo
+            </label>
+            <label for="disuasivo">
+                <input type="radio" id="disuasivo" name="tipoControl" value="1-Disuasivo">
+                Disuasivo
+            </label>
+            <label for="correctivo">
+                <input type="radio" id="correctivo" name="tipoControl" value="1-Correctivo"> 
+                Correctivo
+            </label>
+            <label for="detectivo">
+                <input type="radio" id="detectivo" name="tipoControl" value="2-Detectivo"> 
+                Detectivo
+            </label>
+            
         </fieldset>
         <br>
 
         <fieldset>
-            <legend>Nivel de Implementación:</legend>
-            <input type="radio" id="manual" name="nivelImplementacion" value="3-Manual" checked> Manual
-            <input type="radio" id="semiautomatico" name="nivelImplementacion" value="1-Semiautomático"> Semiautomático
-            <input type="radio" id="automatico" name="nivelImplementacion" value="2-Automático"> Automático
+            <legend><i class="zmdi zmdi-view-dashboard"></i> Nivel de Implementación:</legend>
+
+            <label for="manual">
+                <input type="radio" id="manual" name="nivelImplementacion" value="3-Manual" checked> 
+                Manual
+            </label>
+            <label for="semiautomatico">
+                <input type="radio" id="semiautomatico" name="nivelImplementacion" value="1-Semiautomático"> 
+                Semiautomático
+            </label>
+            <label for="automatico">
+                <input type="radio" id="automatico" name="nivelImplementacion" value="2-Automático"> 
+                Automático
+            </label>
+            
         </fieldset>
         <br>
 
-        <label for="periodicidad">Periodicidad de ocurrencia del control:</label>
+        <label class="textarea-label" for="periodicidad"><i class="zmdi zmdi-time-restore"></i> Periodicidad de ocurrencia del control:</label>
+        <br>
         <select id="periodicidad" name="periodicidad">
             <option value="0" selected disabled hidden>Selecciona la periodicidad</option>
             <option value="3-Por evento">Por evento</option>
@@ -66,9 +101,12 @@
             <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente.</p>
         </div>
 
-        <button type="submit" class="formulario_btn">Enviar</button>
-
+        <button type="submit" class="button">Enviar</button>
+        
     </form>
+    
+    </div>
+    <!-- <img src="../public/assets/Research paper-bro.png" height="400px" alt=""> -->
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>

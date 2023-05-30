@@ -1,5 +1,36 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&display=swap');
+/* Configuracion general */
+*{
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body{
+    padding: 50px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #68c2bf;
+}
+
+#data-container{
+    border: 1px solid #6b6b6b;
+    padding: 50px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+strong{
+    font-weight: 500;
+    color: #68c2bf;
+}
+
+.card{
+    margin-left: 150px;
+    width: 300px !important;
 }
