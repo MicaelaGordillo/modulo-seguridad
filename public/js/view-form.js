@@ -19,15 +19,18 @@ window.addEventListener('load', function() {
     var tipoControlSplit = tipoControl.valueOf().split("-");
     var valorTipoControl = parseInt(tipoControlSplit[0]);
     var tipoControlSelect = tipoControlSplit[1];
-    document.getElementById("tipoControl").textContent = tipoControlSelect;
+    var porcentajeTipoControl = valorTipoControl*100/9;
+    document.getElementById("tipoControl").textContent = tipoControlSelect+" -> "+porcentajeTipoControl.toFixed(2)+"%";
     var nivelImplementacionSplit = nivelImplementacion.valueOf().split("-");
     var valorNivelImplementacion = parseInt(nivelImplementacionSplit[0]);
     var nivelImplementacionSelect = nivelImplementacionSplit[1];
-    document.getElementById("nivelImplementacion").textContent = nivelImplementacionSelect;
+    var porcentajeNivelImplementacion = valorNivelImplementacion*100/9;
+    document.getElementById("nivelImplementacion").textContent = nivelImplementacionSelect + " -> " + porcentajeNivelImplementacion.toFixed(2) + "%";
     var periodicidadSplit = periodicidad.valueOf().split("-");
     var valorPeriodicidad = parseInt(periodicidadSplit[0]);
     var periodicidadSelect = periodicidadSplit[1];
-    document.getElementById("periodicidad").textContent = periodicidadSelect;
+    var porcentajePeriodicidad = valorPeriodicidad*100/9;
+    document.getElementById("periodicidad").textContent = periodicidadSelect + " -> " + porcentajePeriodicidad.toFixed(2) + "%";
     var total = valorTipoControl + valorNivelImplementacion + valorPeriodicidad;
     console.log("Total: "+total);
     total = total*100/9;
@@ -59,12 +62,12 @@ window.addEventListener('load', function() {
             {
                 "from": 0,
                 "to": 20,
-                "color": "#77dd77"
+                "color": "#c63637"
             },
             {
                 "from": 20,
                 "to": 40,
-                "color": "#f9e46e"
+                "color": "#f66060"
             },
             {
                 "from": 40,
@@ -74,12 +77,12 @@ window.addEventListener('load', function() {
             {
                 "from": 60,
                 "to": 80,
-                "color": "#f66060"
+                "color": "#f9e46e"
             },
             {
                 "from": 80,
                 "to": 100,
-                "color": "#c63637"
+                "color": "#77dd77"
             }
         ],
         colorPlate: "#fff",
