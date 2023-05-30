@@ -102,7 +102,7 @@ window.addEventListener('load', function() {
         const element = document.getElementById("pdfContent");
         html2pdf()
         .set({
-            margin: 1,
+            margin: 0,
             filename: 'efectividad-control.pdf',
             image: {
                 type: 'jpeg',
@@ -114,7 +114,7 @@ window.addEventListener('load', function() {
             },
             jsPDF: {
                 unit: "in",
-                format: "a3",
+                format: "a4",
                 orientation: 'portrait'
             }
         })

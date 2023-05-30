@@ -7,7 +7,7 @@
 }
 
 body{
-    padding: 50px;
+    padding: 10px 50px;
 }
 
 h2{
@@ -23,6 +23,7 @@ h2{
     padding: 50px;
     width: 600px;
     margin: 0 auto;
+    border-radius: 10px;
 }
 
 strong{
@@ -33,4 +34,55 @@ strong{
 .card{
     margin-left: 150px;
     width: 300px !important;
+}
+
+/* boton */
+.button {
+    height: 55px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid rgb(119, 119, 119);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: 30px;
+    /* z-index: 1; */
+}
+
+.button:after {
+    content: "";
+    
+    width: 100% !important;
+    z-index: -1 !important;
+    position: absolute ;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.button:hover:after {
+    top: 0px !important;
+    left: 0px !important;
+}
+
+@media (min-width: 768px) {
+    .button {
+        padding: 13px 50px 13px;
+    }
+}
+#generatePDFButton:after{
+    background-color: #68c2bf;
+}
+#aceptarButton:after{
+    background-color: #99de8d;
+}
+#button-container{
+    text-align: center;
+    margin-top: 50px;
 }
